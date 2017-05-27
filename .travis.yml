@@ -1,6 +1,10 @@
-sudo: false
 language: java
-jdk: oraclejdk8
 
-script:
- - src/calculator/testCalculator.java
+jdk:
+  - oraclejdk8
+  - openjdk7
+
+install: ant deps
+
+ script:
+  - ant test
